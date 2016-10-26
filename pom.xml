@@ -11,6 +11,7 @@
     <jersey-container.version>2.26</jersey-container.version>
     <hibernate.version>5.2.1.Final</hibernate.version>
     <h2.version>1.4.196</h2.version>
+    <rest-assured.version>3.0.5</rest-assured.version>
     <checkstyle-plugin.version>2.17</checkstyle-plugin.version>
     <exec-plugin.version>1.6.0</exec-plugin.version>
     <usb4java.version>1.2.0</usb4java.version>
@@ -32,6 +33,13 @@
       <version>${mockito.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>${rest-assured.version}</version>
+      <scope>test</scope>
+    </dependency>
+
 
     <dependency>
       <groupId>org.glassfish.jersey.containers</groupId>
@@ -109,6 +117,7 @@
         <configuration>
           <excludes>
             <exclude>**/*ITest.java</exclude>
+            <exclude>**/*RestTest.java</exclude>
           </excludes>
         </configuration>
         <executions>
@@ -124,6 +133,7 @@
               </excludes>
               <includes>
                 <include>**/*ITest.java</include>
+                <include>**/*TestSuite.java</include>
               </includes>
             </configuration>
           </execution>
