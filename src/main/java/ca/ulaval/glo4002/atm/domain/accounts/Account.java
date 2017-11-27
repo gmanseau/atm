@@ -15,7 +15,7 @@ import ca.ulaval.glo4002.atm.domain.accounts.transactions.TransactionLog;
 public abstract class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "accountNumber")

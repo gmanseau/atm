@@ -1,13 +1,15 @@
 package ca.ulaval.glo4002.atm.rest;
 
+
+import ca.ulaval.glo4002.atm.AtmServer;
+import ca.ulaval.glo4002.atm.contexts.DevContext;
+import ca.ulaval.glo4002.atm.contexts.TestContext;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
-
-import ca.ulaval.glo4002.atm.AtmServer;
-import ca.ulaval.glo4002.atm.contexts.TestContext;
 
 @RunWith(Suite.class)
 @SuiteClasses({ WithdrawResourceRestTest.class })

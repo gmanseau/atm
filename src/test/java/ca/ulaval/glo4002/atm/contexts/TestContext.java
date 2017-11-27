@@ -2,10 +2,10 @@ package ca.ulaval.glo4002.atm.contexts;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 import ca.ulaval.glo4002.atm.application.ServiceLocator;
 import ca.ulaval.glo4002.atm.application.banking.BankingService;
+import ca.ulaval.glo4002.atm.application.jpa.EntityManagerFactoryProvider;
 import ca.ulaval.glo4002.atm.application.jpa.EntityManagerProvider;
 import ca.ulaval.glo4002.atm.domain.accounts.AccountRepository;
 import ca.ulaval.glo4002.atm.domain.accounts.StandardAccount;
@@ -25,7 +25,8 @@ public class TestContext implements Context {
     }
 
     private void fillDatabase() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("atm-test");
+
+        EntityManagerFactory entityManagerFactory = EntityManagerFactoryProvider.getFactory();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityManagerProvider.setEntityManager(entityManager);
 

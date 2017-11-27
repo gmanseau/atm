@@ -1,6 +1,7 @@
 package ca.ulaval.glo4002.atm.rest;
 
-import static io.restassured.RestAssured.*;
+
+import static io.restassured.RestAssured.given;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class RestTestBase {
+
     protected static final int ACCOUNT_NUMBER_WITH_MONEY = 123;
     protected static final int ACCOUNT_NUMBER_WITHOUT_MONEY = 456;
 

@@ -1,10 +1,9 @@
 package ca.ulaval.glo4002.atm.rest;
 
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
 import javax.ws.rs.core.Response.Status;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class WithdrawResourceRestTest extends RestTestBase {
@@ -21,7 +20,6 @@ public class WithdrawResourceRestTest extends RestTestBase {
                 .and().body("amount", equalTo((float) request.amount));
     }
 
-    @Ignore
     @Test
     public void withdrawMoneyOnAccountThatDoesntExistResultsInA404Error() {
         WithdrawalRequest request = new WithdrawalRequest(100);
